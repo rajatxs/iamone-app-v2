@@ -1,0 +1,11 @@
+@import "../vars";
+
+@mixin shadow-small {
+   box-shadow: $shadow-small;
+}
+@mixin shadow-medium {
+   box-shadow: $shadow-medium;
+}
+@mixin shadow-large {
+   box-shadow: $shadow-large;
+}

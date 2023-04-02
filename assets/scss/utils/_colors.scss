@@ -1,0 +1,79 @@
+@import "../vars";
+
+@mixin bg-primary {
+   background-color: $primary;
+   color: $primary-fr;
+}
+@mixin bg-error {
+   background-color: $error;
+   color: $error-fr;
+}
+@mixin bg-warn {
+   background-color: $warn;
+   color: $warn-fr;
+}
+@mixin bg-light {
+   background-color: $light;
+   color: $light-fr;
+}
+@mixin bg-cyan {
+   background-color: $cyan;
+   color: $cyan-fr;
+}
+@mixin bg-purple {
+   background-color: $purple;
+   color: $purple-fr;
+}
+@mixin bg-violet {
+   background-color: $violet;
+   color: $violet-fr;
+}
+@mixin bg-background {
+   background-color: $background;
+   color: $foreground;
+}
+@mixin bg-foreground {
+   background-color: $foreground;
+   color: $background;
+}
+
+@mixin bg-gradient-1 {
+   background: #c471f5;
+   background: -webkit-linear-gradient(135deg, #c471f5 0%, #fa71cd 100%);
+   background: linear-gradient(135deg, #c471f5 0%, #fa71cd 100%);
+   color: white;
+}
+@mixin bg-gradient-2 {
+   background: #ff0f7b;
+   background: -webkit-linear-gradient(90deg, #ff0f7b 0%, #f89c2a 100%);
+   background: linear-gradient(90deg, #ff0f7b 0%, #f89c2a 100%);
+   color: #fff;
+}
+
+@mixin bg-gradient-3 {
+   background: #fc466b;
+   background: -webkit-linear-gradient(135deg, #3f5efb, #fc466b);
+   background: linear-gradient(135deg, #3f5efb, #fc466b);
+   color: #fff;
+}
+
+@mixin bg-gradient-4 {
+   background: #fc4a1a;
+   background: -webkit-linear-gradient(135deg, #f7b733, #fc4a1a);
+   background: linear-gradient(135deg, #f7b733, #fc4a1a);
+   color: #fff;
+}
+
+@mixin bg-gradient-5 {
+   background: #7f00ff;
+   background: -webkit-linear-gradient(135deg, #e100ff, #7f00ff);
+   background: linear-gradient(135deg, #e100ff, #7f00ff);
+   color: #fff;
+}
+
+@mixin bg-gradient-6 {
+   background: #36d1dc;
+   background: -webkit-linear-gradient(135deg, #36d1dc, #5b86e5);
+   background: linear-gradient(135deg, #36d1dc, #5b86e5);
+   color: #fff;
+}

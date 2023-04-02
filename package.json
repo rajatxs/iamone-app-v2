@@ -1,0 +1,29 @@
+{
+  "name": "@rxpm/iamone-app",
+  "version": "0.0.1",
+  "description": "Official web-app for iamone.link platform",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "keywords": [
+    "iamone",
+    "iamone-app"
+  ],
+  "author": {
+    "name": "Rajat Sharma",
+    "email": "rxx175@gmail.com",
+    "url": "https://github.com/rajatxs"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "nuxt": "3.3.2"
+  },
+  "dependencies": {
+    "sass": "^1.60.0",
+    "sass-loader": "^13.2.2"
+  }
+}

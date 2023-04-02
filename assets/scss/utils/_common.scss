@@ -1,0 +1,17 @@
+@import "../vars";
+
+@mixin radius-small {
+   border-radius: $gap-quarter;
+}
+@mixin radius-medium {
+   border-radius: $gap-half;
+}
+@mixin radius-large {
+   border-radius: $gap;
+}
+@mixin radius-inherit {
+   border-radius: inherit;
+}
+@mixin rounded {
+   border-radius: 50%;
+}

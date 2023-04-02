@@ -1,0 +1,61 @@
+$font-sans: "Inter", "Roboto", Arial;
+$font-mono: "Menlo", "Monaco", "Lucida Console", Monospace;
+
+$gap: 16pt;
+$gap-half: 8pt;
+$gap-quarter: 4pt;
+
+$shadow-small: 0 5px 10px rgba(0, 0, 0, 0.12);
+$shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.12);
+$shadow-large: 0 30px 60px rgba(0, 0, 0, 0.12);
+
+$radius: 8px;
+
+$accents-1: #fafafa;
+$accents-2: #eaeaea;
+$accents-3: #999;
+$accents-4: #888;
+$accents-5: #666;
+$accents-6: #444;
+$accents-7: #333;
+$accents-8: #111;
+
+$dark-accents-1: #111;
+$dark-accents-2: #333;
+$dark-accents-3: #444;
+$dark-accents-4: #666;
+$dark-accents-5: #888;
+$dark-accents-6: #999;
+$dark-accents-7: #eaeaea;
+$dark-accents-8: #fafafa;
+
+$blue: #0070f3;
+$red: #ee0000;
+$yellow: #f5a623;
+
+$primary: $blue;
+$primary-fr: #fff;
+
+$error: $red;
+$error-fr: #fff;
+
+$warn: $yellow;
+$warn-fr: #000;
+
+$light: #eaeaea;
+$light-fr: #000;
+
+$cyan: #50e3c2;
+$cyan-fr: #fff;
+
+$purple: #f81ce5;
+$purple-fr: #fff;
+
+$violet: #7928ca;
+$violet-fr: #fff;
+
+$background: #fff;
+$foreground: #000;
+
+$dark-background: #000;
+$dark-foreground: #fff;

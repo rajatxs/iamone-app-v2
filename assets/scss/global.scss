@@ -1,0 +1,243 @@
+@import "./vars";
+@import "./utils/colors";
+
+#__nuxt {
+   height: inherit;
+   background-color: inherit;
+   color: inherit;
+}
+
+.app-icon {
+   width: 14pt;
+   height: 14pt;
+}
+
+/* ---------------- colors ---------------- */
+.bg-primary {
+   @include bg-primary;
+}
+
+.bg-error {
+   @include bg-error;
+}
+
+.bg-warn {
+   @include bg-warn;
+}
+
+.bg-light {
+   @include bg-light;
+}
+
+.bg-cyan {
+   @include bg-cyan;
+}
+
+.bg-purple {
+   @include bg-purple;
+}
+
+.bg-violet {
+   @include bg-violet;
+}
+
+.bg-background {
+   @include bg-background;
+}
+
+.bg-foreground {
+   @include bg-foreground;
+}
+
+.use-primary {
+   --color: $primary;
+   --color-fr: $primary-fr;
+}
+
+.use-error {
+   --color: $error;
+   --color-fr: $error-fr;
+}
+
+.use-warn {
+   --color: $warn;
+   --color-fr: $warn-fr;
+}
+
+.use-light {
+   --color: $light;
+   --color-fr: $light-fr;
+}
+
+.use-cyan {
+   --color: $cyan;
+   --color-fr: $cyan-fr;
+}
+
+.use-purple {
+   --color: $purple;
+   --color-fr: $purple-fr;
+}
+
+.use-violet {
+   --color: $violet;
+   --color-fr: $violet-fr;
+}
+
+.use-background {
+   --color: $background;
+   --color-fr: $background-fr;
+}
+
+.use-foreground {
+   --color: $foreground;
+   --color-fr: $background;
+}
+
+.text-primary {
+   color: $primary;
+}
+
+.text-error {
+   color: $error;
+}
+
+.text-warn {
+   color: $warn;
+}
+
+.text-light {
+   color: $light;
+}
+
+.text-cyan {
+   color: $cyan;
+}
+
+.text-purple {
+   color: $purple;
+}
+
+.text-violet {
+   color: $violet;
+}
+
+.text-background {
+   color: $background;
+}
+
+.text-foreground {
+   color: $foreground;
+}
+
+/* ---------------- mockup splash screen ---------------- */
+.vscreen-splash {
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+}
+
+.vscreen-splash .vscreen-splash-icon {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: calc(4.48rem);
+   height: calc(4.48rem);
+   user-select: none;
+   -webkit-user-drag: none;
+}
+
+/* ---------------- scrollbar style ---------------- */
+.regular-scroll::-webkit-scrollbar {
+   width: 6px;
+   height: 6px;
+}
+
+.regular-scroll::-webkit-scrollbar-thumb {
+   border-radius: 25px;
+   background-color: transparent;
+   transition: background-color 70ms linear;
+}
+
+.regular-scroll:hover::-webkit-scrollbar-thumb {
+   background-color: $accents-2;
+}
+
+.regular-scroll:hover::-webkit-scrollbar-thumb:active {
+   background-color: $accents-3;
+}
+
+.cover-viewport {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+}
+
+/* ---------------- app input controls ---------------- */
+.app-input {
+   display: inline-flex;
+   height: 46px;
+   width: 140pt;
+   padding: $gap-quarter $gap-half;
+   border-radius: $radius;
+   border-width: 1.5px;
+   border-style: solid;
+   border-color: transparent;
+   box-sizing: border-box;
+   background-color: $accents-1;
+   color: $accents-6;
+   transition: border-color 120ms ease, background-color 90ms linear;
+}
+
+.app-input.outlined {
+   border-color: $accents-2;
+}
+
+.app-input .app-input-icon {
+   width: 30px;
+   display: inline-flex;
+   align-items: center;
+}
+
+.app-input .app-input-icon .app-icon {
+   color: $accents-4;
+}
+
+.app-input.focused {
+   border-color: $primary;
+   background-color: transparent;
+}
+
+.app-input[aria-multiline="true"] {
+   height: auto;
+}
+
+.app-input[aria-expanded="true"] {
+   width: 100%;
+}
+
+.app-input .app-input-controller {
+   border: none;
+   width: 100%;
+   border-radius: inherit;
+   font-family: $font-sans;
+   background-color: transparent;
+}
+
+.app-input .app-input-controller[type="number"]::-webkit-inner-spin-button,
+.app-input .app-input-controller[type="number"]::-webkit-outer-spin-button {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   margin: 0;
+}
+
+.app-input .app-input-controller::placeholder {
+   font-size: 93%;
+   color: $accents-3;
+}
