@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import ActivityLayout from '@/layouts/ActivityLayout.vue'
+</script>
+
 <template>
-   <h1>Home screen</h1>
+   <ActivityLayout></ActivityLayout>
 </template>
