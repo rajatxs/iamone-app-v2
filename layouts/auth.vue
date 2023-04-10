@@ -55,6 +55,7 @@ const props = defineProps({
 @import "@/assets/scss/utils/common";
 @import "@/assets/scss/utils/colors";
 @import "@/assets/scss/utils/shadows";
+@import "@/assets/scss/utils/scale";
 
 #__nuxt {
    @include bg-gradient-3;
@@ -80,7 +81,6 @@ const props = defineProps({
 
    .auth-layout-container {
       width: 420pt;
-      height: auto;
       padding-top: $gap + $gap-half;
       padding-bottom: $gap + $gap-half;
       display: inherit;
@@ -88,18 +88,20 @@ const props = defineProps({
       justify-content: center;
 
       @include shadow-medium;
-      @include radius-medium;
       @include bg-background;
-      
-      @media (max-width: 480px) {
-         border-radius: 0;
+
+      @include scale-small {
          height: 100%;
          width: 100%;
       }
-      
-      @media (min-width: 481px) and (max-width: 767px) {
-         border-radius: 0;
+
+      @include scale-medium {
          height: 100%;
+      }
+
+      @include scale-large {
+         height: auto;
+         @include radius-medium;
       }
 
       .auth-layout-header {

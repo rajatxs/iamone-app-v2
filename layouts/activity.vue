@@ -1,22 +1,40 @@
 <script setup lang="ts">
-import { defineProps } from 'vue'
-import ControlBar from '@/components/ControlBar/index.vue'
+import { defineProps, ref, onMounted } from 'vue'
+import ControlBar from '@/components/ControlBar/ControlBar.vue'
+import MockupView from '@/components/MockupView/MockupView.vue'
+
+const enablePreview = ref<boolean>(false)
 
 const props = defineProps({
    title: {
       type: String,
-      default: 'Dashboard • iamone'
+      default: 'Dashboard'
    },
+})
+
+function onWindowResize(): void {
+   if (window.innerWidth < 1080 && enablePreview.value) {
+      enablePreview.value = false
+   } else if (window.innerWidth > 1080 && !enablePreview.value) {
+      enablePreview.value = true
+   }
+}
+
+onMounted(() => {
+   window.onresize = onWindowResize
+
+   onWindowResize()
 })
 </script>
 
 <template>
    <Head>
-      <Title>{{ props.title }}</Title>
+      <Title>{{ props.title }} • iamone</Title>
    </Head>
 
    <main class="activity-layout-root">
       <ControlBar />
+      <MockupView v-if="enablePreview" />
    </main>
 </template>
 
