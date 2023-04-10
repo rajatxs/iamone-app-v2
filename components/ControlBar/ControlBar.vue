@@ -94,28 +94,44 @@ const controlBarTabs = ref<ControlBarTab[]>([
          border-bottom-color: transparent;
          box-sizing: border-box;
          transition: border-bottom-color 120ms linear;
-      }
-      .app-controlbar-tab .label {
-         color: $accents-5;
-      }
-      .app-controlbar-tab:hover {
-         border-bottom-color: $accents-2;
-      }
-      .app-controlbar-tab:hover .label {
-         color: $accents-6;
-      }
-      .app-controlbar-tab.active {
-         border-bottom-width: 3px;
-         border-bottom-color: $primary;
-      }
-      .app-controlbar-tab.active .label {
-         color: $foreground;
+
+         &:hover {
+            border-bottom-color: $accents-2;
+
+            .label {
+               color: $accents-6;
+            }
+         }
+
+         &.active {
+            border-bottom-width: 3px;
+            border-bottom-color: $primary;
+
+            .label {
+               color: $foreground;
+            }
+         }
+
+         .label {
+            color: $accents-5;
+         }
       }
    }
 
    .app-controlbar-activity-area {
       height: calc(100% - 98pt);
       overflow-y: auto;
+   }
+}
+
+@media screen and (max-width: 1080px) {
+   .app-controlbar {
+      width: 100%;
+
+      .app-controlbar-top {
+         margin-left: $gap;
+         margin-right: $gap;
+      }
    }
 }
 </style>
