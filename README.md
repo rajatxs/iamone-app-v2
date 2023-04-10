@@ -29,6 +29,9 @@ Add a **.env** new file in the root of the project, and add the following variab
 ```sh
 # iamone API URL (https://github.com/rajatxs/iamone-core)
 VITE_APP_API_URL="<API URL>"
+
+# Current APP URL
+VITE_APP_URL="<APP URL>"
 ```
 
 Start development server using following command
