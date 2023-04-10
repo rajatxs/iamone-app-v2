@@ -1,0 +1,17 @@
+@mixin scale-small {
+   @media (max-width: 480px) {
+      @content;
+   }
+}
+
+@mixin scale-medium {
+   @media (min-width: 481px) and (max-width: 767px) {
+      @content;
+   }
+}
+
+@mixin scale-large {
+   @media (min-width: 768px) {
+      @content;
+   }
+}
