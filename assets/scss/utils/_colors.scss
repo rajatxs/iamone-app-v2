@@ -1,5 +1,17 @@
 @import "../vars";
 
+@mixin light-theme {
+   html, html[data-theme='light'] {
+      @content;
+   }
+}
+
+@mixin dark-theme {
+   html[data-theme='dark'] {
+      @content;
+   }
+}
+
 @mixin bg-primary {
    background-color: $primary;
    color: $primary-fr;
