@@ -3,7 +3,6 @@ import { ref, onMounted } from 'vue'
 import { api } from '@/utils/http'
 import { SignupRequestPayload, SignupResponse } from '@/types/auth'
 import { kvStore } from '@/utils/kvstore'
-import AuthLayout from '@/layouts/AuthLayout.vue'
 import Button from '@/components/Button.vue'
 
 const router = useRouter()
@@ -62,7 +61,8 @@ onMounted(() => {
       <Title>Signup • iamone</Title>
    </Head>
 
-   <AuthLayout
+   <NuxtLayout
+      name="auth"
       action="signup"
       header="Create new profile"
       :on-submit="signup">
@@ -155,7 +155,7 @@ onMounted(() => {
             Signup
          </Button>
       </div>
-   </AuthLayout>
+   </NuxtLayout>
 </template>
 
 <style lang="scss">

@@ -3,7 +3,6 @@ import { ref } from 'vue'
 import { api } from '@/utils/http'
 import { LoginRequestPayload, LoginResponse } from '@/types/auth'
 import { kvStore } from '@/utils/kvstore'
-import AuthLayout from '@/layouts/AuthLayout.vue'
 import Button from '@/components/Button.vue'
 
 const router = useRouter()
@@ -50,7 +49,8 @@ async function login() {
       <Title>Login • iamone</Title>
    </Head>
 
-   <AuthLayout
+   <NuxtLayout
+      name="auth"
       action="login"
       header="Continue to iamone"
       :on-submit="login">
@@ -114,7 +114,7 @@ async function login() {
             Login
          </Button>
       </div>
-   </AuthLayout>
+   </NuxtLayout>
 </template>
 
 <style lang="scss">
