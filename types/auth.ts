@@ -5,10 +5,8 @@ export interface SignupRequestPayload {
 }
 
 export interface SignupResponse {
-   result: {
-      accessToken: string
-      refreshToken: string
-   }
+   accessToken: string
+   refreshToken: string
 }
 
 export interface LoginRequestPayload {
@@ -18,8 +16,6 @@ export interface LoginRequestPayload {
 }
 
 export interface LoginResponse {
-   result: {
-      accessToken: string
-      refreshToken: string
-   }
+   accessToken: string
+   refreshToken: string
 }
