@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { api } from '@/utils/http'
+import { rpc } from '@/utils/http'
 import { LoginRequestPayload, LoginResponse } from '@/types/auth'
 import { kvStore } from '@/utils/kvstore'
 import Button from '@/components/Button.vue'
@@ -25,18 +25,18 @@ async function login() {
    }
 
    loading.value = true
-   try {
-      const response = await api().post<LoginResponse>('/user/token', payload)
 
-      kvStore.set('access-token', response.result.accessToken)
-      kvStore.set('refresh-token', response.result.refreshToken)
+   try {
+      const response = await rpc().call<LoginResponse>('user.GenerateToken', payload)
+
+      kvStore.set('access-token', response.accessToken)
+      kvStore.set('refresh-token', response.refreshToken)
       router.push({ path: '/' })
    } catch (error: any) {
-      console.error(error)
-      if (error && error.status) {
-         errorMessage.value = error?.body?.message
-      } else {
+      if (error instanceof TypeError) {
          errorMessage.value = 'Network error'
+      } else {
+         errorMessage.value = error.message
       }
    }
 

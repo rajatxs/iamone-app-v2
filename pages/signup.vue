@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import { api } from '@/utils/http'
+import { rpc } from '@/utils/http'
 import { SignupRequestPayload, SignupResponse } from '@/types/auth'
 import { kvStore } from '@/utils/kvstore'
 import Button from '@/components/Button.vue'
@@ -31,19 +31,20 @@ async function signup() {
    loading.value = true
 
    try {
-      const response = await api().post<SignupResponse>('/user/register', payload)
-      
-      kvStore.set('access-token', response.result.accessToken)
-      kvStore.set('refresh-token', response.result.refreshToken)
+      const response = await rpc().call<SignupResponse>('user.Register', payload)
+
+      kvStore.set('access-token', response.accessToken)
+      kvStore.set('refresh-token', response.refreshToken)
       router.push({ path: '/' })
    } catch (error: any) {
       console.error(error)
-      if (error && error.status) {
-         errorMessage.value = error?.body?.message
-      } else {
+      if (error instanceof TypeError) {
          errorMessage.value = 'Network error'
+      } else {
+         errorMessage.value = error.message
       }
    }
+
    loading.value = false
 }
 
