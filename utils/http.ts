@@ -1,6 +1,8 @@
 import { HttpService } from '../services/http'
+import { RpcService } from '../services/rpc'
 
 var _apiService: HttpService
+var _rpcService: RpcService
 
 export function api(): HttpService {
    if (!_apiService) {
@@ -11,4 +13,13 @@ export function api(): HttpService {
    }
 
    return _apiService
+}
+
+export function rpc(): RpcService {
+   if (!_rpcService) {
+      const rpcUrl = `${import.meta.env.VITE_APP_RPC_URL}/x`
+      _rpcService = new RpcService(rpcUrl)
+   }
+
+   return _rpcService
 }
