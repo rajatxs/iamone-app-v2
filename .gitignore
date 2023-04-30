@@ -3,5 +3,6 @@ temp/
 .nuxt/
 .cache/
 .output/
+dist/
 
 .env

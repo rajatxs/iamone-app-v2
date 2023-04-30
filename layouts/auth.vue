@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { defineProps, PropType } from 'vue'
-
 export type AuthAction = 'login' | 'signup'
 
 const props = defineProps({
@@ -57,10 +55,6 @@ const props = defineProps({
 @import "@/assets/scss/utils/shadows";
 @import "@/assets/scss/utils/scale";
 
-#__nuxt {
-   @include bg-gradient-3;
-}
-
 .app-input-field {
    display: flex;
    flex-direction: row;
@@ -78,6 +72,7 @@ const props = defineProps({
    justify-content: center;
    align-items: center;
    height: 100%;
+   @include bg-gradient-3;
 
    .auth-layout-container {
       width: 420pt;

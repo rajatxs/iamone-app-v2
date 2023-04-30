@@ -15,7 +15,11 @@ export class HttpResponseError extends Error {
       public statusText: string, 
       public ok: boolean, 
       public body: any) {
-      super(`Received ${status}`)
+
+      if (!body) {
+         body = { message: 'Something went wrong!' }
+      }
+      super(body.message)
    }
 }
 

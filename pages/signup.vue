@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
 import { rpc } from '@/utils/http'
 import { SignupRequestPayload, SignupResponse } from '@/types/auth'
 import { kvStore } from '@/utils/kvstore'

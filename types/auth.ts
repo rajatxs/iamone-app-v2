@@ -1,3 +1,5 @@
+import { ApiResponse } from './index'
+
 export interface SignupRequestPayload {
    username: string
    email: string
@@ -15,7 +17,7 @@ export interface LoginRequestPayload {
    password: string
 }
 
-export interface LoginResponse {
+export type LoginResponse = ApiResponse<{
    accessToken: string
    refreshToken: string
-}
+}>
